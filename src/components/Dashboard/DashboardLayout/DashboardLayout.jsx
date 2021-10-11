@@ -1,15 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import DashboardHeader from './DashboardHeader/DashboardHeader'
 import DashboardSidebar from './DashboardSidebar/DashboardSidebar'
-import {Grid} from '@mui/material'
+import {Grid, Drawer} from '@mui/material'
 import './styles.scss'
 
 const DashboardLayout = ({children}) =>{
+  const [drawerState, setDrawerState] = useState(false)
     return (
         <>
-          <DashboardHeader />
+          <DashboardHeader drawerState={drawerState} setDrawerState={setDrawerState}/>
           <div className="content-container">
-            <DashboardSidebar />
+            <DashboardSidebar setDrawerState={setDrawerState} drawerState={drawerState}/>
             <div className="layout-content">
               {children}
             </div>

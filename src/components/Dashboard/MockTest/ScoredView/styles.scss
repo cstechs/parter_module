@@ -57,3 +57,53 @@
             margin-right: 0;
         }
 }
+
+
+@media screen and (max-width : 1024px) {
+    .scored-container{
+        .scored-div {
+                width: 23.5%;
+                margin-right: 12.8px;
+                margin-bottom: 30px;
+            .test-tag{
+                bottom: -21px;
+                font-size: 12px;
+            }
+        }
+    } 
+}
+
+@media screen and (max-width : 768px) {
+    .scored-container{
+        .scored-div {
+                width: 23.5%;
+                margin-right: 10.9px;
+                margin-bottom: 30px;
+            .test-tag{
+                bottom: -21px;
+                font-size: 12px;
+            }
+        }
+    } 
+}
+
+// Mobile responsive 
+
+@media screen and (max-width : 425px) {
+    .scored-container{
+        .scored-div {
+                width: 46.5%;
+                margin-right: 10.9px;
+                margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width : 320px) {
+    .scored-container{
+        padding: 7px 0;
+        .scored-div {
+                width: 100%;
+        }
+    }
+}

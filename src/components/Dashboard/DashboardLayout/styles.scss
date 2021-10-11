@@ -2,6 +2,17 @@
     display: flex;
     .layout-content{
         width: 88%;
+        height: 88vh;
+        overflow: auto;
+    }
+
+}
+
+@media screen and (max-width : 768px) {
+    .content-container{
+            .layout-content{
+                width: 100%;
+        }
     }
 
 }

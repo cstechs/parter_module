@@ -40,3 +40,91 @@
         margin-left: 25px;
     }
 }
+
+
+@media screen and (max-width : 1024px) {
+    .mock-container{
+            .mock-header{
+                margin: auto;
+                width: 95%;
+            .header-button{
+                button{
+                    width: 190px;
+                    svg{
+                        font-size: 30px;
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+
+        .mock-content{
+            width: 95%;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .mock-container{
+            .mock-header{
+            width: 95%;
+            margin: auto;
+            .header-button{
+                button{
+                    padding: 20px 5px;
+                    font-size: 14px;
+                    width: 174px;
+                    svg{
+                        font-size: 30px;
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+
+        .mock-content{
+            width: 95%;
+            margin: auto;
+        }
+    }
+}
+
+// Mobile responsive 
+
+@media screen and (max-width : 425px) {
+    .mock-container{
+            .mock-header{
+                    width: 90%;
+                    margin: auto;
+                .header-button{
+                    margin-bottom: 23px;
+                }
+            }
+
+            .mock-content{
+                width: 95%;
+                margin: auto;
+            }
+    }
+}
+
+@media screen and (max-width : 375px) {
+    .mock-container{
+            .mock-header{
+                   display: block;
+                .header-button{
+                    margin-bottom: 23px;
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .mock-content{
+                width: 95%;
+                margin: auto;
+            }
+    }
+}
+

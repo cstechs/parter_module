@@ -54,7 +54,7 @@ const MockTest = () => {
               }`}
             >
               <BarChart />
-              Section Wise
+              Section Wise Test
             </Button>
           </div>
           <div className="header-button">

@@ -12,7 +12,7 @@
         text-align: center;
         border-radius: 32px;
         border: 2px solid #f67280;
-        margin-bottom: 20px;
+        margin-bottom: 32px;
         .ques-no{
                /* width: 49px; */
                 /* height: 50px; */
@@ -56,4 +56,53 @@
       :nth-child(4n){
             margin-right: 0;
         }
+}
+
+@media screen and (max-width : 1024px) {
+    .practice-container{
+        .practice-div {
+                width: 23.5%;
+                margin-right: 12.8px;
+                margin-bottom: 30px;
+            .test-tag{
+                bottom: -21px;
+                font-size: 12px;
+            }
+        }
+    } 
+}
+
+@media screen and (max-width : 768px) {
+    .practice-container{
+        .practice-div {
+                width: 23.5%;
+                margin-right: 10.9px;
+                margin-bottom: 30px;
+            .test-tag{
+                bottom: -21px;
+                font-size: 12px;
+            }
+        }
+    } 
+}
+
+// Mobile responsive 
+
+@media screen and (max-width : 425px) {
+    .practice-container{
+        .practice-div {
+                width: 46.5%;
+                margin-right: 10.9px;
+                margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width : 320px) {
+    .practice-container{
+        padding: 7px 0;
+        .practice-div {
+                width: 100%;
+        }
+    }
 }

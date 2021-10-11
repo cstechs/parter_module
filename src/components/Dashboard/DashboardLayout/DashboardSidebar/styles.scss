@@ -33,3 +33,50 @@
     }
 
 }
+
+    .MuiPaper-root {
+         display: none;
+        padding: 0 53px;
+        text-align: center;
+        .drawer-div{
+                height: inherit;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                a{
+                  text-decoration: none;
+                  color: #4d4d4d;
+                  .menu-item{
+                          margin-bottom: 30px;
+                          cursor: pointer;
+                      svg{
+                          font-size: 47px;
+                          padding: 9px 12px;
+                          border-radius: 10px;
+                          color: white;
+                          background: #969595;
+                      }
+                      .menu-name{
+                          font-size: 12px;
+                          margin-top: 10px;
+                          font-weight: 700;
+                      }
+                      &.selected{
+                          svg{
+                              background: #3db6e7;
+                          }
+                      }
+                  }
+              }
+        }
+}
+
+@media screen and (max-width : 768px) {
+    .sidebar-div{
+        display: none;
+    }
+    .MuiPaper-root{
+        display: block;
+    }
+}

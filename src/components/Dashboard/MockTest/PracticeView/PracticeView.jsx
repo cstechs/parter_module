@@ -28,6 +28,18 @@ const PracticeView = () => {
           <div className="mins">2 Hr 46 Min</div>
           <div className="test-tag">Practice Test D</div>
         </div>
+        <div className="practice-div">
+          <div className="ques-no">71</div>
+          <div className="ques-heading">Questions</div>
+          <div className="mins">2 Hr 46 Min</div>
+          <div className="test-tag">Practice Test A</div>
+        </div>
+        <div className="practice-div">
+          <div className="ques-no">71</div>
+          <div className="ques-heading">Questions</div>
+          <div className="mins">2 Hr 46 Min</div>
+          <div className="test-tag">Practice Test A</div>
+        </div>
       </div>
     );
 }

@@ -24,10 +24,12 @@
             }
             .welcome-header{
                 font-size: 14px;
+                width: fit-content;
+                margin: auto;
             }
             .profile-div{
                 display: flex;
-                margin-left: 38%;
+                //margin-left: 38%;
                 align-items: center;
                 button{
                     border-radius: 20px;
@@ -42,7 +44,37 @@
                 .avatar-image{
                     width: 37px;
                 }
+                .hamburger-icon{
+                    display: none;
+                }
             }
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-header{
+        display: none;
+    }
+    .header-div{
+        .MuiGrid-root{
+            .grid-item{
+                .profile-div{
+                    width: fit-content;
+                    margin-left: auto;
+                    .notification{
+                        margin: 0 10px;
+                    }
+                    .hamburger-icon{
+                        margin-right: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width : 425px) {
+    
 }
