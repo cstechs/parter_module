@@ -3,7 +3,7 @@ import './styles.scss'
 
 const PracticeView = () => {
     return (
-      <div className="pratice-container">
+      <div className="practice-container">
         <div className="practice-div">
           <div className="ques-no">71</div>
           <div className="ques-heading">Questions</div>
