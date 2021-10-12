@@ -1,10 +1,30 @@
-import React, {useState} from 'react'
-import {Grid, Drawer, List, ListItem, TextareaAutosize, Menu, MenuItem, MenuList, ListItemIcon} from "@mui/material"
-import {BarChartOutlined, Home, PersonAdd, CreditCard} from '@mui/icons-material'
-import {Link, useLocation} from 'react-router-dom';
-import './styles.scss';
+import React, { useState } from "react";
+import {
+  Grid,
+  Drawer,
+  List,
+  ListItem,
+  TextareaAutosize,
+  Menu,
+  MenuItem,
+  MenuList,
+  ListItemIcon,
+} from "@mui/material";
+import {
+  BarChartOutlined,
+  Home,
+  PersonAdd,
+  ArrowRight,
+  CreditCard,
+} from "@mui/icons-material";
+import { Link, useLocation } from "react-router-dom";
+import "./styles.scss";
 
 const DashboardSidebar = ({ setDrawerState, drawerState }) => {
+  const [menuDropdown, setmenuDropdown] = useState(false);
+  const menuDropdownPreview = () => {
+    setmenuDropdown(!menuDropdown);
+  };
   // const [selectedMenu, setSelectedMenu] = useState("dashboard")
   const { pathname } = useLocation();
   const selectedMenu = pathname.slice(1);
@@ -34,16 +54,30 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
           </div>
         </Link>
 
-        <Link to="/user-account">
+        <span>
           <div
             className={`menu-item ${
               selectedMenu === "user-account" ? `selected` : ""
             }`}
+            onClick={menuDropdownPreview}
           >
             <PersonAdd />
-            <div className="menu-name">U ser Account</div>
+            <div className="menu-name">User Account</div>
           </div>
-        </Link>
+          {menuDropdown && (
+            <div className="menu-options">
+              <ArrowRight />
+              <ul>
+                <li>
+                  <Link to="/students">Students</Link>
+                </li>
+                <li>
+                  <Link to="/trainers">Trainers</Link>
+                </li>
+              </ul>
+            </div>
+          )}
+        </span>
 
         <Link to="/buy-packages">
           <div
@@ -56,13 +90,13 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
           </div>
         </Link>
       </div>
-      
-        <Drawer
-          //anchor={anchor}
-          open={drawerState}
-          onClose={() => setDrawerState(!drawerState)}
-        >
-          <div className="drawer-div">
+
+      <Drawer
+        //anchor={anchor}
+        open={drawerState}
+        onClose={() => setDrawerState(!drawerState)}
+      >
+        <div className="drawer-div">
           <Link to="/dashboard">
             <div
               className={`menu-item ${
@@ -107,10 +141,10 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
               <div className="menu-name">Buy Packages</div>
             </div>
           </Link>
-          </div>
-        </Drawer>
+        </div>
+      </Drawer>
     </>
   );
 };
 
-export default DashboardSidebar
+export default DashboardSidebar;

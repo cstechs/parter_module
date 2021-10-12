@@ -3,15 +3,20 @@ import { Button, Grid } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import Search from "@mui/icons-material/Search";
 import Table from "./table";
+import AddStudent from "./addStudent";
 import "./styles.scss";
 
 const Students = () => {
+  const [previewModal, setpreviewModal] = useState(false);
+  const handleModalPreview = () => {
+    setpreviewModal(!previewModal);
+  };
   return (
     <div className="user-account-container">
       <div className="user-account-header">
         <Grid container>
           <Grid item xs={12} md={6}>
-            <Button className="add-account">
+            <Button className="add-account" onClick={handleModalPreview}>
               <AddIcon />
               Add New Student
             </Button>
@@ -39,6 +44,9 @@ const Students = () => {
       <div className="user-account-content">
         <Table />
       </div>
+      {previewModal && (
+        <AddStudent open={previewModal} modalHandle={handleModalPreview} />
+      )}
     </div>
   );
 };
