@@ -5,8 +5,7 @@
     align-items: center;
     padding: 37px 0;
     .scored-div{
-        background-color:#FFFFFF33 ;
-        box-shadow: 30px 70px 120px 0px #1B314221;
+        box-shadow : 30px 70px 120px 0px #1b314269;
         position: relative;
         //width: 22%;
         margin-right: 41px;
@@ -15,6 +14,9 @@
         border-radius: 32px;
         border: 2px solid #f67280;
         margin-bottom: 20px;
+        .shadow{
+            box-shadow: 8px 70px 90px 10px black;
+        }
         .ques-no{
                /* width: 49px; */
                 /* height: 50px; */

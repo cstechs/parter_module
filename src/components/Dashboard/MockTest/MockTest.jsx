@@ -25,7 +25,7 @@ const MockTest = () => {
       <div className="mock-container">
         <div className="mock-header">
           <Grid container>
-            <Grid item md={3} xs={6}>
+            <Grid item md={3} xs={12}>
               <div className="header-button">
                 <Button
                   onClick={() => setMockTestView("scored")}
@@ -36,7 +36,7 @@ const MockTest = () => {
                 </Button>
               </div>
             </Grid>
-            <Grid item md={3} xs={6}>
+            <Grid item md={3} xs={12}>
               <div className="header-button">
                 <Button
                   onClick={() => setMockTestView("practice")}
@@ -48,7 +48,7 @@ const MockTest = () => {
               </div>
             </Grid>
 
-            <Grid item md={3} xs={6}> 
+            <Grid item md={3} xs={12}> 
               <div className="header-button">
                 <Button
                   onClick={() => setMockTestView("section")}
@@ -60,7 +60,7 @@ const MockTest = () => {
               </div>
             </Grid>
 
-            <Grid item md={3} xs={6}>
+            <Grid item md={3} xs={12}>
               <div className="header-button">
                 <Button
                   onClick={() => setMockTestView("type")}

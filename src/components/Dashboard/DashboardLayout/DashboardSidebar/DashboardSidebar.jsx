@@ -41,7 +41,7 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
             }`}
           >
             <PersonAdd />
-            <div className="menu-name">U ser Account</div>
+            <div className="menu-name">User Account</div>
           </div>
         </Link>
 
@@ -93,7 +93,7 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
               }`}
             >
               <PersonAdd />
-              <div className="menu-name">U ser Account</div>
+              <div className="menu-name">User Account</div>
             </div>
           </Link>
 
