@@ -5,8 +5,10 @@
     align-items: center;
     padding: 37px 0;
     .scored-div{
+        background-color:#FFFFFF33 ;
+        box-shadow: 30px 70px 120px 0px #1B314221;
         position: relative;
-        width: 22%;
+        //width: 22%;
         margin-right: 41px;
         padding: 30px 20px;
         text-align: center;
@@ -62,7 +64,7 @@
 @media screen and (max-width : 1024px) {
     .scored-container{
         .scored-div {
-                width: 23.5%;
+                //width: 23.5%;
                 margin-right: 12.8px;
                 margin-bottom: 30px;
             .test-tag{
@@ -76,7 +78,7 @@
 @media screen and (max-width : 768px) {
     .scored-container{
         .scored-div {
-                width: 23.5%;
+               // width: 23.5%;
                 margin-right: 10.9px;
                 margin-bottom: 30px;
             .test-tag{
@@ -92,7 +94,7 @@
 @media screen and (max-width : 425px) {
     .scored-container{
         .scored-div {
-                width: 46.5%;
+               // width: 46.5%;
                 margin-right: 10.9px;
                 margin-bottom: 30px;
         }
@@ -103,7 +105,7 @@
     .scored-container{
         padding: 7px 0;
         .scored-div {
-                width: 100%;
+              //  width: 100%;
         }
     }
 }
