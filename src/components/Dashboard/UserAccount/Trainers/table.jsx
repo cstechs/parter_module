@@ -74,7 +74,7 @@ const TableComponent = () => {
               <TableCell>
                 <span>Basic Package</span>
                 <Button className="upgrade">
-                  Upgrade
+                  Assign Ids
                   <img src={UpgradeIcon} alt="" />
                 </Button>
               </TableCell>

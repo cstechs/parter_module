@@ -10,7 +10,7 @@ function App() {
     <DashboardLayout>
       <Route path="/mock-test" component={MockTest} />
       <Route path="/students" component={Students} />
-      {/* <Route path="/trainers" component={Trainers} /> */}
+      <Route path="/trainers" component={Trainers} />
     </DashboardLayout>
   );
 }
