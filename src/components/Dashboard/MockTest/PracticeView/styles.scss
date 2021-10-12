@@ -5,14 +5,17 @@
     align-items: center;
     padding: 37px 0;
     .practice-div{
+        box-shadow : 30px 70px 120px 0px #1b314269;
         position: relative;
-        width: 22%;
         margin-right: 41px;
         padding: 30px 20px;
         text-align: center;
         border-radius: 32px;
         border: 2px solid #f67280;
         margin-bottom: 32px;
+        .shadow{
+            box-shadow: 8px 70px 90px 10px black;
+        }
         .ques-no{
                /* width: 49px; */
                 /* height: 50px; */
@@ -61,7 +64,6 @@
 @media screen and (max-width : 1024px) {
     .practice-container{
         .practice-div {
-                width: 23.5%;
                 margin-right: 12.8px;
                 margin-bottom: 30px;
             .test-tag{
@@ -75,7 +77,6 @@
 @media screen and (max-width : 768px) {
     .practice-container{
         .practice-div {
-                width: 23.5%;
                 margin-right: 10.9px;
                 margin-bottom: 30px;
             .test-tag{
@@ -91,7 +92,6 @@
 @media screen and (max-width : 425px) {
     .practice-container{
         .practice-div {
-                width: 46.5%;
                 margin-right: 10.9px;
                 margin-bottom: 30px;
         }

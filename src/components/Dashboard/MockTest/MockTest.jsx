@@ -24,50 +24,54 @@ const MockTest = () => {
     return (
       <div className="mock-container">
         <div className="mock-header">
-          <div className="header-button">
-            <Button
-              onClick={() => setMockTestView("scored")}
-              className={`${
-                mockTestView === "scored" ? `selected` : ""
-              }`}
-            >
-              <BarChart />
-              Scored Mock Test
-            </Button>
-          </div>
-          <div className="header-button">
-            <Button
-              onClick={() => setMockTestView("practice")}
-              className={`${
-                mockTestView === "practice" ? `selected` : ""
-              }`}
-            >
-              <BarChart />
-              Practice Test
-            </Button>
-          </div>
-          <div className="header-button">
-            <Button
-              onClick={() => setMockTestView("section")}
-              className={`${
-                mockTestView === "section" ? `selected` : ""
-              }`}
-            >
-              <BarChart />
-              Section Wise Test
-            </Button>
-          </div>
-          <div className="header-button">
-            <Button
-              onClick={() => setMockTestView("type")}
-              className={` ${
-                mockTestView === "type" ? `selected` : ""
-              }`}
-            >
-              <BarChart />
-              Task type
-            </Button>
-          </div>
+          <Grid container>
+            <Grid item md={3} xs={12}>
+              <div className="header-button">
+                <Button
+                  onClick={() => setMockTestView("scored")}
+                  className={`${mockTestView === "scored" ? `selected` : ""}`}
+                >
+                  <BarChart />
+                  Scored Mock Test
+                </Button>
+              </div>
+            </Grid>
+            <Grid item md={3} xs={12}>
+              <div className="header-button">
+                <Button
+                  onClick={() => setMockTestView("practice")}
+                  className={`${mockTestView === "practice" ? `selected` : ""}`}
+                >
+                  <BarChart />
+                  Practice Test
+                </Button>
+              </div>
+            </Grid>
+
+            <Grid item md={3} xs={12}> 
+              <div className="header-button">
+                <Button
+                  onClick={() => setMockTestView("section")}
+                  className={`${mockTestView === "section" ? `selected` : ""}`}
+                >
+                  <BarChart />
+                  Section Wise Test
+                </Button>
+              </div>
+            </Grid>
+
+            <Grid item md={3} xs={12}>
+              <div className="header-button">
+                <Button
+                  onClick={() => setMockTestView("type")}
+                  className={` ${mockTestView === "type" ? `selected` : ""}`}
+                >
+                  <BarChart />
+                  Task type
+                </Button>
+              </div>
+            </Grid>
+          </Grid>
         </div>
         <div className="mock-content">{renderMockView(mockTestView)}</div>
       </div>
