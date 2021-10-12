@@ -15,7 +15,6 @@
                 padding: 20px 10px;
                 background: #ffff;
                 border-radius: 20px;
-                box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
                 width: 100%;
                 svg{
                     background-color: #9ea1fb;
@@ -28,7 +27,7 @@
                 &.selected{
                     color: #ffff;
                     background: rgb(61,183,233);
-                    background: linear-gradient(90deg, rgba(61,183,233,1) 0%, rgba(67,24,255,1) 100%);
+                    background: linear-gradient(135deg, rgba(61, 183, 233, 0.5) 0%, rgba(67, 24, 255, 0.5) 100%);
                     svg{
                         background-color: transparent;
                     }
