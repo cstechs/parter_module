@@ -110,12 +110,9 @@
   .sidebar-div {
     display: none;
   }
-  .MuiPaper-root {
-    display: block;
-  }
 
     .MuiPaper-root {
-         display: none;
+         display: block;
         padding: 0 53px;
         text-align: center;
         .drawer-div{
@@ -151,6 +148,40 @@
                           }
                       }
                   }
+                      .menu-options {
+      position: absolute;
+      display: flex;
+      left: 60px;
+      top: 273px;
+      svg {
+        font-size: 50px;
+        color: #ff725e;
+        path {
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+      }
+      ul {
+        margin-top: 10px;
+        margin-left: -40px;
+        li {
+          list-style: none;
+          background: #3db6e7;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+          color: #fff;
+          margin-bottom: 10px;
+          font-size: 13px;
+          padding: 6px 20px;
+          a {
+            color: #fff;
+          }
+          &:last-child {
+            background: #8b8787;
+          }
+        }
+      }
+    }
               }
         }
+      }
 }

@@ -125,10 +125,24 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
               className={`menu-item ${
                 selectedMenu === "user-account" ? `selected` : ""
               }`}
+              onClick={menuDropdownPreview}
             >
               <PersonAdd />
               <div className="menu-name">User Account</div>
             </div>
+            {menuDropdown && (
+              <div className="menu-options">
+                <ArrowRight />
+                <ul>
+                  <li>
+                    <Link to="/students">Students</Link>
+                  </li>
+                  <li>
+                    <Link to="/trainers">Trainers</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </Link>
 
           <Link to="/buy-packages">
