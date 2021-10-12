@@ -1,80 +1,98 @@
-.header-div{
-    height: 70px;
+.header-div {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  .MuiGrid-root {
     display: flex;
     align-items: center;
-    .MuiGrid-root{
+    .grid-item {
+      .logo-div {
         display: flex;
         align-items: center;
-        .grid-item{
-            .logo-div{
-                display: flex;
-                align-items: center;
-                margin-left: 32px;
-                img{
-                    width: 37px;
-                    padding: 7px 12px;
-                    background: #4d4d4d;
-                    border-radius: 50%;
-                }
-                .logo-title{
-                    margin-left: 12px;
-                    font-size: 20px;
-                    font-weight: 700;
-                }
-            }
-            .welcome-header{
-                font-size: 14px;
-                width: fit-content;
-                margin: auto;
-            }
-            .profile-div{
-                display: flex;
-                //margin-left: 38%;
-                align-items: center;
-                button{
-                    border-radius: 20px;
-                    border-color: black;
-                    font-size: 12px;
-                    text-transform: capitalize;
-                    color: black;
-                }
-                .notification{
-                    margin: 0 25px;
-                }
-                .avatar-image{
-                    width: 37px;
-                }
-                .hamburger-icon{
-                    display: none;
-                }
-            }
+        margin-left: 32px;
+        img {
+          width: 37px;
+          padding: 7px 12px;
+          background: #4d4d4d;
+          border-radius: 50%;
         }
+        .logo-title {
+          margin-left: 12px;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+      .welcome-header {
+        font-size: 14px;
+        width: fit-content;
+        margin: auto;
+      }
+      .profile-div {
+        display: flex;
+        //margin-left: 38%;
+        align-items: center;
+        button {
+          border-radius: 20px;
+          border-color: black;
+          font-size: 12px;
+          text-transform: capitalize;
+          color: black;
+        }
+        .contact-mail {
+          cursor: pointer;
+          color: #afafb6;
+          display: none;
+        }
+        .notification {
+          margin: 0 25px;
+        }
+        .avatar-image {
+          width: 37px;
+        }
+        .hamburger-icon {
+          display: none;
+        }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .welcome-header{
-        display: none;
-    }
-    .header-div{
-        .MuiGrid-root{
-            .grid-item{
-                .profile-div{
-                    width: fit-content;
-                    margin-left: auto;
-                    .notification{
-                        margin: 0 10px;
-                    }
-                    .hamburger-icon{
-                        margin-right: 10px;
-                        display: inline-block;
-                    }
-                }
-            }
+  .welcome-header {
+    display: none;
+  }
+  .header-div {
+    .MuiGrid-root {
+      .grid-item {
+        .profile-div {
+          width: fit-content;
+          margin-left: auto;
+          .notification {
+            margin: 0 10px;
+          }
+          .hamburger-icon {
+            margin-right: 10px;
+            display: inline-block;
+          }
         }
-    } 
+      }
+    }
+  }
 }
 
-@media screen and (max-width : 425px) {
-    
+@media screen and (max-width: 375px) {
+  .header-div {
+    .MuiGrid-root {
+      .grid-item {
+        .profile-div {
+          button {
+            display: none;
+          }
+          .contact-mail {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
 }
