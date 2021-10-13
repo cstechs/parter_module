@@ -20,6 +20,8 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
   // const [selectedMenu, setSelectedMenu] = useState("dashboard")
   const { pathname } = useLocation();
   const selectedMenu = pathname.slice(1);
+  console.log('pathname', selectedMenu)
+  
   return (
     <>
       <div className="sidebar-div">
@@ -31,7 +33,9 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
               }`}
               //onClick={() => setSelectedMenu("dashboard")}
             >
-              <Home />
+              <div className="icon-div">
+                <Home />
+              </div>
               <div className="menu-name">Dashboard</div>
             </div>
           </Link>
@@ -42,7 +46,9 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
                 selectedMenu === "mock-test" ? `selected` : ""
               }`}
             >
-              <BarChartOutlined />
+              <div className="icon-div">
+                <BarChartOutlined />
+              </div>
               <div className="menu-name">Mock Test</div>
             </div>
           </Link>
@@ -50,21 +56,23 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
           <span>
             <div
               className={`menu-item ${
-                selectedMenu === "user-account" ? `selected` : ""
+                selectedMenu === ("students" || "trainers") ? `selected` : ""
               }`}
               onClick={menuDropdownPreview}
             >
-              <PersonAdd />
+              <div className="icon-div">
+                <PersonAdd />
+              </div>
               <div className="menu-name">User Account</div>
             </div>
             {menuDropdown && (
               <div className="menu-options">
                 <ArrowRight />
                 <ul>
-                  <li>
+                  <li onClick={menuDropdownPreview}>
                     <Link to="/students">Students</Link>
                   </li>
-                  <li>
+                  <li onClick={menuDropdownPreview}>
                     <Link to="/trainers">Trainers</Link>
                   </li>
                 </ul>
@@ -78,11 +86,12 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
                 selectedMenu === "buy-packages" ? `selected` : ""
               }`}
             >
-              <CreditCard />
+              <div className="icon-div">
+                <CreditCard />
+              </div>
               <div className="menu-name">Buy Packages</div>
             </div>
           </Link>
-
         </div>
       </div>
 

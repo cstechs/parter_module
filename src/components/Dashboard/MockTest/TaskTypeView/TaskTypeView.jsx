@@ -14,14 +14,45 @@ const TaskTypeView = () =>{
             <Grid container spacing={3}>
               <Grid item md={3} xs={12}>
                 <div className="left-div">
-                  <img src={micIcon} alt="Speaking" />
-                  <div className="section-title">Speaking</div>
-                  <img src={forwardIcon} alt="Speaking" />
+                  <Button>
+                    <img
+                      src={micIcon}
+                      alt="Speaking"
+                      className="speaking-icon"
+                    />
+                    <div className="section-title">Speaking</div>
+                    <img
+                      src={forwardIcon}
+                      alt="Speaking"
+                      className="speaking-icon"
+                    />
+                  </Button>
+                </div>
+                <div className="left-div">
+                  <Button>
+                    <img src={writingIcon} alt="Writing" />
+                    <div className="section-title">Writing</div>
+                    <div></div>
+                  </Button>
+                </div>
+                <div className="left-div">
+                  <Button>
+                    <img src={readingIcon} alt="Reading" />
+                    <div className="section-title">Reading</div>
+                    <div></div>
+                  </Button>
+                </div>
+                <div className="left-div">
+                  <Button>
+                    <img src={listeningIcon} alt="Listening" />
+                    <div className="section-title">Listening</div>
+                    <div></div>
+                  </Button>
                 </div>
               </Grid>
               <Grid item md={9} xs={12}>
                 <div className="right-div">
-                  <Grid container>
+                  <Grid container alignItems="center" justifyContent="center">
                     <Grid item md={4} xs={12}>
                       <div className="test-number">Read Aloud</div>
                     </Grid>
@@ -36,21 +67,8 @@ const TaskTypeView = () =>{
                     </Grid>
                   </Grid>
                 </div>
-              </Grid>
-            </Grid>
-          </div>
-          <div className="task-type-row">
-            <Grid container spacing={3}>
-              <Grid item md={3} xs={12}>
-                <div className="left-div">
-                  <img src={writingIcon} alt="Speaking" />
-                  <div className="section-title">Writing</div>
-                  <div></div>
-                </div>
-              </Grid>
-              <Grid item md={9} xs={12}>
                 <div className="right-div">
-                  <Grid container>
+                  <Grid container alignItems="center" justifyContent="center">
                     <Grid item md={4} xs={12}>
                       <div className="test-number">Read Aloud Test A</div>
                     </Grid>
@@ -65,21 +83,8 @@ const TaskTypeView = () =>{
                     </Grid>
                   </Grid>
                 </div>
-              </Grid>
-            </Grid>
-          </div>
-          <div className="task-type-row">
-            <Grid container spacing={3}>
-              <Grid item md={3} xs={12}>
-                <div className="left-div">
-                  <img src={readingIcon} alt="Reading" />
-                  <div className="section-title">Reading</div>
-                  <div></div>
-                </div>
-              </Grid>
-              <Grid item md={9} xs={12}>
                 <div className="right-div">
-                  <Grid container>
+                  <Grid container alignItems="center" justifyContent="center">
                     <Grid item md={4} xs={12}>
                       <div className="test-number">Read Aloud Test A</div>
                     </Grid>
@@ -97,21 +102,8 @@ const TaskTypeView = () =>{
                     </Grid>
                   </Grid>
                 </div>
-              </Grid>
-            </Grid>
-          </div>
-          <div className="task-type-row">
-            <Grid container spacing={3}>
-              <Grid item md={3} xs={12}>
-                <div className="left-div">
-                  <img src={listeningIcon} alt="Listening" />
-                  <div className="section-title">Listening</div>
-                  <div></div>
-                </div>
-              </Grid>
-              <Grid item md={9} xs={12}>
                 <div className="right-div">
-                  <Grid container>
+                  <Grid container alignItems="center" justifyContent="center">
                     <Grid item md={4} xs={12}>
                       <div className="test-number">Repeat Sentence</div>
                     </Grid>
@@ -123,21 +115,8 @@ const TaskTypeView = () =>{
                     </Grid>
                   </Grid>
                 </div>
-              </Grid>
-            </Grid>
-          </div>
-          <div className="task-type-row">
-            <Grid container spacing={3}>
-              <Grid item md={3} xs={12}>
-                <div className="left-div">
-                  <img src={listeningIcon} alt="Listening" />
-                  <div className="section-title">Speaking</div>
-                  <div></div>
-                </div>
-              </Grid>
-              <Grid item md={9} xs={12}>
                 <div className="right-div">
-                  <Grid container>
+                  <Grid container alignItems="center" justifyContent="center">
                     <Grid item md={4} xs={12}>
                       <div className="test-number">Describe Image</div>
                     </Grid>

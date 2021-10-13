@@ -19,22 +19,38 @@
       margin-bottom: 30px;
       cursor: pointer;
       font-family: 'Montserrat', sans-serif !important;
-      svg {
-        font-size: 47px;
-        padding: 9px 12px;
-        border-radius: 10px;
-        color: white;
-        background: #969595;
+      .icon-div{
+            box-shadow: 0px 4px 4px 0px #00000040;
+            filter: drop-shadow(0px 4px 4px #00000040);
+            //box-shadow: 0px 4px 4px 0px #00000040;
+            background: #acacac;
+            border-radius: 10px;
+            padding: 6px 0px;
+            width: 59px;
+            margin: auto;
+
+        svg {
+            filter: drop-shadow(0px 4px 4px  #00000040);
+            font-size: 32px;
+            //padding: 9px 12px;
+            color: white;
+          }
       }
+  
       .menu-name {
+        filter: drop-shadow(0px 4px 4px  #00000040);
         font-size: 12px;
         margin-top: 10px;
         font-weight: 700;
+
       }
       &.selected {
-        svg {
+        .icon-div{
           background: #3db6e7;
         }
+        /*svg {
+          background: #3db6e7;
+        } */
         .menu-name {
               color: #ff725e;
         }
