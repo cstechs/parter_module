@@ -2,9 +2,12 @@
   height: 70px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 100;
   .MuiGrid-root {
     display: flex;
     align-items: center;
+    background: white;
     .grid-item {
       .logo-div {
         display: flex;
@@ -26,6 +29,11 @@
         font-size: 14px;
         width: fit-content;
         margin: auto;
+        font-family: 'Open Sans', sans-serif !important;
+        box-shadow: 30px 70px 120px 0px #1B314221;
+        border: 1px solid white;
+        border-radius: 20px;
+
       }
       .profile-div {
         display: flex;
@@ -58,9 +66,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .welcome-header {
-    display: none;
+  .welcome-grid{
+    //display: none !important;
+    background: transparent !important;
+    .welcome-header {
+        display: none;
+      }
   }
+ 
   .header-div {
     .MuiGrid-root {
       .grid-item {
@@ -80,7 +93,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .header-div {
     .MuiGrid-root {
       .grid-item {

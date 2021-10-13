@@ -1,11 +1,15 @@
 .sidebar-div {
   text-align: center;
   width: 12%;
-  height: calc(100vh - 70px);
+  height: calc(100% - 70px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+  .sidebar-container{
+    position: fixed;
+    top: 125px;
   a,
   span {
     text-decoration: none;
@@ -14,6 +18,7 @@
     .menu-item {
       margin-bottom: 30px;
       cursor: pointer;
+      font-family: 'Montserrat', sans-serif !important;
       svg {
         font-size: 47px;
         padding: 9px 12px;
@@ -30,16 +35,21 @@
         svg {
           background: #3db6e7;
         }
+        .menu-name {
+              color: #ff725e;
+        }
       }
     }
     .menu-options {
-      position: absolute;
-      display: flex;
-      left: 60px;
-      top: 0;
+    position: absolute;
+    display: flex;
+    left: 1px;
+    top: 0px;
       svg {
-        font-size: 50px;
-        color: #ff725e;
+          font-size: 47px;
+          color: #ff725e;
+          margin-top: 10px;
+          margin-right: 10px;
         path {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
@@ -47,6 +57,7 @@
       ul {
         margin-top: 10px;
         margin-left: -40px;
+        padding: 0px 17px;
         li {
           list-style: none;
           background: #3db6e7;
@@ -54,8 +65,9 @@
           border-radius: 10px;
           color: #fff;
           margin-bottom: 10px;
-          font-size: 13px;
-          padding: 6px 20px;
+          font-size: 13px;      
+          padding: 6px 5px;
+
           a {
             color: #fff;
           }
@@ -66,12 +78,16 @@
       }
     }
   }
+  }
+
 }
 
 .MuiPaper-root {
   display: none;
-  padding: 0 53px;
+  width: 244px;
+  padding: 20px 0;
   text-align: center;
+
   .drawer-div {
     height: inherit;
     display: flex;
@@ -111,77 +127,79 @@
     display: none;
   }
 
-    .MuiPaper-root {
-         display: block;
-        padding: 0 53px;
-        text-align: center;
-        .drawer-div{
-                height: inherit;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                a{
-                  text-decoration: none;
-                  color: #4d4d4d;
-                  .menu-item{
-                          margin-bottom: 30px;
-                          cursor: pointer;
-                      svg{
-                          font-size: 47px;
-                          padding: 9px 12px;
-                          border-radius: 10px;
-                          color: white;
-                          background: #969595;
-                      }
-                      .menu-name{
-                          font-size: 12px;
-                          margin-top: 10px;
-                          font-weight: 700;
-                      }
-                      &.selected{
-                          svg{
-                              background: #3db6e7;
-                          }
-                          .menu-name{
-                              color: #FF725E;
-                          }
-                      }
-                  }
-                      .menu-options {
-      position: absolute;
+  .MuiPaper-root {
+    display: block;
+    padding: 0 53px;
+    text-align: center;
+    .drawer-div {
+      height: inherit;
       display: flex;
-      left: 60px;
-      top: 273px;
-      svg {
-        font-size: 50px;
-        color: #ff725e;
-        path {
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-      }
-      ul {
-        margin-top: 10px;
-        margin-left: -40px;
-        li {
-          list-style: none;
-          background: #3db6e7;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 10px;
-          color: #fff;
-          margin-bottom: 10px;
-          font-size: 13px;
-          padding: 6px 20px;
-          a {
-            color: #fff;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        color: #4d4d4d;
+        .menu-item {
+          margin-bottom: 30px;
+          cursor: pointer;
+          svg {
+            font-size: 47px;
+            padding: 9px 12px;
+            border-radius: 10px;
+            color: white;
+            background: #969595;
           }
-          &:last-child {
-            background: #8b8787;
+          .menu-name {
+            font-size: 12px;
+            margin-top: 10px;
+            font-weight: 700;
+          }
+          &.selected {
+            svg {
+              background: #3db6e7;
+            }
+            .menu-name {
+              color: #ff725e;
+            }
+          }
+        }
+        .menu-options {
+          position: absolute;
+          display: flex;
+          left: 125px;
+          top: 272px;
+          svg {
+            color: #ff725e;
+            font-size: 46px;
+            width: 30px;
+            path {
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+          }
+          ul {
+            margin: 0;
+            /* margin-left: -40px; */
+            padding-left: 0;
+            li {
+                  list-style: none;
+                  background: #3db6e7;
+                  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                  border-radius: 10px;
+                  color: #fff;
+                  margin-bottom: 10px;
+                  font-size: 13px;
+                  padding: 5px 14px;
+              a {
+                color: #fff;
+              }
+              &:last-child {
+                background: #8b8787;
+              }
+            }
           }
         }
       }
     }
-              }
-        }
-      }
+  }
 }

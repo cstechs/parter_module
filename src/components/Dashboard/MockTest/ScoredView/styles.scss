@@ -6,6 +6,7 @@
     padding: 37px 0;
     .scored-div{
         box-shadow : 30px 70px 120px 0px #1b314269;
+        -moz-box-shadow : 30px 70px 120px 0px #1b314269;
         position: relative;
         //width: 22%;
         margin-right: 41px;
@@ -16,6 +17,7 @@
         margin-bottom: 20px;
         .shadow{
             box-shadow: 8px 70px 90px 10px black;
+            -moz-box-shadow : 8px 70px 90px 10px black;
         }
         .ques-no{
                /* width: 49px; */
@@ -37,11 +39,13 @@
             font-size: 14px;
             font-weight: 600;
             margin-top: 16px;
+            font-family: 'Open Sans', sans-serif !important;
         }
         .mins{
             font-size: 18px;
             font-weight: 700;
             margin: 10px 0;
+            font-family: 'Open Sans', sans-serif !important;
         }
         .test-tag{
                position: absolute;
@@ -54,6 +58,7 @@
                 font-size: 12px;
                 left: 16%;
                 right: 16%;
+                font-family: 'Open Sans', sans-serif !important;
         }
       
     }

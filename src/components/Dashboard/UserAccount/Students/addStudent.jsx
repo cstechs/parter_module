@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal, Box, Grid } from "@mui/material";
 
 const AddStudent = ({ open, modalHandle }) => {
@@ -11,6 +11,7 @@ const AddStudent = ({ open, modalHandle }) => {
         aria-describedby="modal-modal-description"
       >
         <Box className="add-student">
+          <div className="shadow"></div>
           <h2>Add New Student</h2>
           <form action="">
             <Grid container>

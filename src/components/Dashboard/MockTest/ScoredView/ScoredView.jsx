@@ -1,11 +1,11 @@
 import React from 'react'
-import { Menu, Grid , Button } from "@mui/material";
+import {  Grid  } from "@mui/material";
 import './styles.scss'
 
 const ScoredView = () =>{
     return (
       <div className="scored-container">
-        <Grid container spacing>
+        <Grid container>
           <Grid item md={4} xs={12}>
             <div className="scored-div">
               <div className="shadow"></div>
@@ -34,6 +34,7 @@ const ScoredView = () =>{
             </div>
           </Grid>
         </Grid>
+        
       </div>
     );
 }
