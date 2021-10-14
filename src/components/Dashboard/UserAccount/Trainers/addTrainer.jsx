@@ -13,7 +13,7 @@ const AddTrainer = ({ open, modalHandle }) => {
       >
         <Box className="add-student">
           <h2>Add New Trainer</h2>
-          <form action="">
+          <form action="" style={{marginBottom: "0"}}>
             <Grid container>
               <Grid item md={6} xs={12}>
                 <label htmlFor="">Full Name</label>
@@ -79,7 +79,7 @@ const AddTrainer = ({ open, modalHandle }) => {
                 </select>
               </Grid>
             </Grid>
-            <div className="actions">
+            <div className="actions" style={{bottom: "-93px"}}>
               <span onClick={modalHandle}>No, Not Now</span>
               <button>Yes, Add Trainer</button>
             </div>

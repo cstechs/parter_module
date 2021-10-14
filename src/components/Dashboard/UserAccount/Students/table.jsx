@@ -35,7 +35,7 @@ const rows = [
 
 const TableComponent = () => {
   return (
-    <TableContainer>
+    <TableContainer sx={{minHeight : 200 , height : 429}}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -59,7 +59,7 @@ const TableComponent = () => {
             </TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody sx={{minHeight: 422}}>
           {rows.map((row) => (
             <TableRow
               key={row.created}

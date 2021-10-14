@@ -35,10 +35,10 @@ const rows = [
 
 const TableComponent = () => {
   return (
-    <TableContainer>
+    <TableContainer sx={{ minHeight: 200, height: 429 }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
+        <TableHead sx={{ borderRadius: 10 }}>
+          <TableRow sx={{ borderRadius: 10 }}>
             <TableCell>
               <span> Date Created</span>
             </TableCell>
