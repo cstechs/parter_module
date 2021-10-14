@@ -40,7 +40,7 @@ const TableComponent = () => {
         <TableHead>
           <TableRow>
             <TableCell>
-              <span> Data Created</span>
+              <span> Date Created</span>
             </TableCell>
             <TableCell align="center">
               <span>Email ID</span>
@@ -66,7 +66,7 @@ const TableComponent = () => {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.created}
+                <div className="data-cell-div"> {row.created} </div>
               </TableCell>
               <TableCell>{row.email}</TableCell>
               <TableCell>{row.name}</TableCell>
@@ -74,13 +74,17 @@ const TableComponent = () => {
               <TableCell>
                 <span>Basic Package</span>
                 <Button className="upgrade">
-                  Upgrade
+                  <div className="upgrade-title">Upgrade</div>
                   <img src={UpgradeIcon} alt="" />
                 </Button>
               </TableCell>
               <TableCell>
-                <Button className="edit">Edit</Button>
-                <Button className="delete">Delete</Button>
+                <Button className="edit">
+                  <div className="edit-title">Edit</div>
+                </Button>
+                <Button className="delete">
+                  <div className="delete-title">Delete</div>
+                </Button>
               </TableCell>
             </TableRow>
           ))}

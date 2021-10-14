@@ -40,7 +40,7 @@ const TableComponent = () => {
         <TableHead>
           <TableRow>
             <TableCell>
-              <span> Data Created</span>
+              <span> Date Created</span>
             </TableCell>
             <TableCell align="center">
               <span>Email ID</span>
@@ -60,30 +60,68 @@ const TableComponent = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.created}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.created}
-              </TableCell>
-              <TableCell>{row.email}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.password}</TableCell>
-              <TableCell>
-                <span>Basic Package</span>
+          <TableRow
+            //key={}
+            sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+          >
+            <TableCell component="th" scope="row">
+              <div className="data-cell-div"> 12 - 10 - 2021 </div>
+            </TableCell>
+            <TableCell>test@ptemocktest.com</TableCell>
+            <TableCell>Test User</TableCell>
+            <TableCell>ptemocktest</TableCell>
+            <TableCell>
+              <div className="package-type-div">
+                <div>Basic Package</div>
+                <div>5 of 10 ids </div>
+              </div>
+
+              <div className="package-type-div">
+                <div>Premium Package</div>
+                <div>5 of 10 ids </div>
+              </div>
+            </TableCell>
+            <TableCell>
+              <Button className="edit">
+                <div className="edit-title">Edit</div>
+              </Button>
+              <Button className="delete">
+                <div className="delete-title">Delete</div>
+              </Button>
+              <Button className="upgrade-side">
+                <div className="upgrade-title">Assign Ids</div>
+                <img src={UpgradeIcon} alt="" />
+              </Button>
+            </TableCell>
+          </TableRow>
+          <TableRow
+            //key={}
+            sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+          >
+            <TableCell component="th" scope="row">
+              <div className="data-cell-div"> 12 - 10 - 2021 </div>
+            </TableCell>
+            <TableCell>test@ptemocktest.com</TableCell>
+            <TableCell>Test User</TableCell>
+            <TableCell>ptemocktest</TableCell>
+            <TableCell>
+              <div className="type-div">
+                <Button className="view-button">View</Button>
                 <Button className="upgrade">
-                  Assign Ids
+                  <div className="upgrade-title">Assign Ids</div>
                   <img src={UpgradeIcon} alt="" />
                 </Button>
-              </TableCell>
-              <TableCell>
-                <Button className="edit">Edit</Button>
-                <Button className="delete">Delete</Button>
-              </TableCell>
-            </TableRow>
-          ))}
+              </div>
+            </TableCell>
+            <TableCell>
+              <Button className="edit">
+                <div className="edit-title">Edit</div>
+              </Button>
+              <Button className="delete">
+                <div className="delete-title">Delete</div>
+              </Button>
+            </TableCell>
+          </TableRow>
         </TableBody>
       </Table>
     </TableContainer>

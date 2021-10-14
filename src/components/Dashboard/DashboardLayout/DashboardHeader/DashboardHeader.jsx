@@ -45,7 +45,7 @@ const DashboardHeader = ({ drawerState, setDrawerState }) => {
               onClick={() => setDrawerState(true)}
             >
               <MenuOpen />
-            </div>
+            </div> 
           </div>
         </Grid>
       </Grid>

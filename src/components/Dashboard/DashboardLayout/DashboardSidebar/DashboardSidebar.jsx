@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Drawer
 } from "@mui/material";
@@ -14,14 +14,40 @@ import "./styles.scss";
 
 const DashboardSidebar = ({ setDrawerState, drawerState }) => {
   const [menuDropdown, setmenuDropdown] = useState(false);
+  const [sideMenuDropdown, setSideMenuDropdown] = useState(false)
+  const wrapperRef = useRef(null);
+
   const menuDropdownPreview = () => {
+    console.log('menu dropdown preview')
     setmenuDropdown(!menuDropdown);
   };
+
+  const handleSideMenuDropdown = () =>{
+      setSideMenuDropdown(!sideMenuDropdown)
+  }
   // const [selectedMenu, setSelectedMenu] = useState("dashboard")
   const { pathname } = useLocation();
   const selectedMenu = pathname.slice(1);
-  console.log('pathname', selectedMenu)
-  
+
+  useEffect(() => {
+    setmenuDropdown(false);
+  }, [selectedMenu]);
+
+  // below is the same as componentDidMount and componentDidUnmount
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, false);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, false);
+    };
+  }, []);
+
+  const handleClickOutside = (event) => {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      console.log('false')
+      setmenuDropdown(false);
+    }
+  };
+
   return (
     <>
       <div className="sidebar-div">
@@ -56,9 +82,12 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
           <span>
             <div
               className={`menu-item ${
-                selectedMenu === ("students" || "trainers") ? `selected` : ""
+                selectedMenu === "students" || selectedMenu === "trainers"
+                  ? `selected`
+                  : ""
               }`}
               onClick={menuDropdownPreview}
+              ref={wrapperRef}
             >
               <div className="icon-div">
                 <PersonAdd />
@@ -69,10 +98,20 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
               <div className="menu-options">
                 <ArrowRight />
                 <ul>
-                  <li onClick={menuDropdownPreview}>
+                  <li
+                    onClick={menuDropdownPreview}
+                    className={` ${
+                      selectedMenu === "students" ? `submenu-selected` : ""
+                    }`}
+                  >
                     <Link to="/students">Students</Link>
                   </li>
-                  <li onClick={menuDropdownPreview}>
+                  <li
+                    onClick={menuDropdownPreview}
+                    className={` ${
+                      selectedMenu === "trainers" ? `submenu-selected` : ""
+                    }`}
+                  >
                     <Link to="/trainers">Trainers</Link>
                   </li>
                 </ul>
@@ -129,19 +168,27 @@ const DashboardSidebar = ({ setDrawerState, drawerState }) => {
               className={`menu-item ${
                 selectedMenu === "user-account" ? `selected` : ""
               }`}
-              onClick={menuDropdownPreview}
+              onClick={handleSideMenuDropdown}
             >
               <PersonAdd />
               <div className="menu-name">User Account</div>
             </div>
-            {menuDropdown && (
+            {sideMenuDropdown && (
               <div className="menu-options">
                 <ArrowRight />
                 <ul>
-                  <li>
+                  <li
+                    className={` ${
+                      selectedMenu === "students" ? `submenu-selected` : ""
+                    }`}
+                  >
                     <Link to="/students">Students</Link>
                   </li>
-                  <li>
+                  <li
+                    className={` ${
+                      selectedMenu === "trainers" ? `submenu-selected` : ""
+                    }`}
+                  >
                     <Link to="/trainers">Trainers</Link>
                   </li>
                 </ul>

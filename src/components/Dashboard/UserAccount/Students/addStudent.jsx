@@ -36,7 +36,7 @@ const AddStudent = ({ open, modalHandle }) => {
               </Grid>
             </Grid>
             <div className="actions">
-              <span onClick={modalHandle}>No, Not Now</span>
+              <button onClick={modalHandle} className='cancel-button'>No, Not Now</button>
               <button>Yes Add Student</button>
             </div>
           </form>

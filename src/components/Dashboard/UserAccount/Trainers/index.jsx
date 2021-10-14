@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Button, Grid } from "@mui/material";
+import {
+  Button,
+  Grid,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+} from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import Search from "@mui/icons-material/Search";
 import Table from "./table";
@@ -8,16 +15,24 @@ import "./styles.scss";
 
 const Trainers = () => {
   const [previewModal, setpreviewModal] = useState(false);
-  const handleModalPreview = () => {
-    setpreviewModal(!previewModal);
-  };
+    const [packageValue, setPackageValue] = useState(10);
+    const handleModalPreview = () => {
+      setpreviewModal(!previewModal);
+    };
+
+    const handleChange = (e) => {
+      setPackageValue(e.target.value);
+    };
+
   return (
     <div className="user-account-container">
       <div className="user-account-header">
         <Grid container>
           <Grid item xs={12} md={6}>
             <Button className="add-account" onClick={handleModalPreview}>
-              <AddIcon />
+              <div className="person-account">
+                <AddIcon />
+              </div>
               Add New Trainer
             </Button>
           </Grid>
@@ -29,14 +44,39 @@ const Trainers = () => {
                   <Search />
                 </span>
               </div>
-              <div className="search-package">
-                <select>
-                  <option value="" disabled selected>
-                    Package
-                  </option>
-                  <option value="package1">package 1</option>
-                </select>
-              </div>
+              <FormControl fullWidth className="select-form">
+                <InputLabel id="package-label">Package</InputLabel>
+                <Select
+                  labelId="package-label"
+                  id="package-select"
+                  value={packageValue}
+                  label="Package"
+                  onChange={handleChange}
+                  native={true}
+                >
+                  <option value="package one">Package one</option>
+                  <option value="package two">Package two</option>
+                  <option value="package three">Package three</option>
+                  {/*<MenuItem key={10} value={10}>
+                    {" "}
+                    10{" "}
+                  </MenuItem>
+                  <MenuItem key={20} value={20}>
+                    {" "}
+                    20{" "}
+                  </MenuItem>
+                  <MenuItem key={30} value={30}>
+                    Thirty
+                  </MenuItem>
+                  <MenuItem key={40} value={40}>
+                    Ten
+                  </MenuItem>
+                  <MenuItem key={50} value={50}>
+                    Twenty
+                  </MenuItem>
+  <MenuItem value={60}>Thirty</MenuItem> */}
+                </Select>
+              </FormControl>
             </div>
           </Grid>
         </Grid>

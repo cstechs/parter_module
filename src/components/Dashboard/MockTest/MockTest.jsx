@@ -24,7 +24,7 @@ const MockTest = () => {
     return (
       <div className="mock-container">
         <div className="mock-header">
-          <Grid container spacing={1}>
+          <Grid container >
             <Grid item md={3} xs={12}>
               <div className="header-button">
                 <Button
@@ -61,7 +61,7 @@ const MockTest = () => {
             </Grid>
 
             <Grid item md={3} xs={12}>
-              <div className="header-button">
+              <div className="header-button" style={{marginRight: 0}}>
                 <Button
                   onClick={() => setMockTestView("type")}
                   className={` ${mockTestView === "type" ? `selected` : ""}`}

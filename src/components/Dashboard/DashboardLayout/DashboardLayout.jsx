@@ -4,6 +4,14 @@ import DashboardSidebar from './DashboardSidebar/DashboardSidebar'
 import {Grid, Drawer} from '@mui/material'
 import './styles.scss'
 
+
+const mobileSiderbar = () => {
+  return(
+    <div className="mobile-footer-container">
+        <div></div>
+    </div>
+  )
+}
 const DashboardLayout = ({children}) =>{
   const [drawerState, setDrawerState] = useState(false)
     return (
