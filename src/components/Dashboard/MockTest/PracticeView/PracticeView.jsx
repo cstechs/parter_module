@@ -5,7 +5,7 @@ import './styles.scss'
 const PracticeView = () => {
     return (
       <div className="practice-container">
-        <Grid container spacing>
+        <Grid container>
           <Grid item md={4} xs={12}>
             <div className="practice-div">
               <div className="shadow"></div>
