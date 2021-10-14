@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, Box, Grid } from "@mui/material";
+import BackupIcon from "@mui/icons-material/Backup";
 
 const AddTrainer = ({ open, modalHandle }) => {
   return (
@@ -27,8 +28,13 @@ const AddTrainer = ({ open, modalHandle }) => {
                 <input type="password" placeholder="************************" />
               </Grid>
               <Grid item md={6} xs={12}>
-                <label htmlFor="">Upload Logo</label>
-                <input type="file" placeholder="************************" />
+                <div className="upload-logo-div">
+                  <div className='logo-div'>Upload Logo</div>
+                  <div className="input-div">
+                    <label htmlFor="logo" className="upload-label">Upload Logo <BackupIcon className="upload-icon"/></label>
+                    <input type="file" id="logo" className="file-input"/>
+                  </div>
+                </div>
               </Grid>
               <Grid item md={6} xs={12}>
                 <label htmlFor="">Package Type</label>
@@ -75,12 +81,12 @@ const AddTrainer = ({ open, modalHandle }) => {
             </Grid>
             <div className="actions">
               <span onClick={modalHandle}>No, Not Now</span>
-              <button>Yes Add Trainer</button>
+              <button>Yes, Add Trainer</button>
             </div>
           </form>
           <div className="add-student-footer">
-            <div className="bubble-1"></div>
             <div className="bubble-2"></div>
+            <div className="bubble-1"></div>
           </div>
         </Box>
       </Modal>

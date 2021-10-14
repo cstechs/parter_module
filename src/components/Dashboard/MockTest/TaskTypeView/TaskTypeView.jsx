@@ -26,7 +26,6 @@ const TaskTypeView = () =>{
                     <img
                       src={forwardIcon}
                       alt="Speaking"
-                      className="speaking-icon"
                     />
                   </Button>
                 </div>

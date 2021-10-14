@@ -37,12 +37,12 @@ const AddStudent = ({ open, modalHandle }) => {
             </Grid>
             <div className="actions">
               <button onClick={modalHandle} className='cancel-button'>No, Not Now</button>
-              <button>Yes Add Student</button>
+              <button>Yes, Add Student</button>
             </div>
           </form>
           <div className="add-student-footer">
-            <div className="bubble-1"></div>
             <div className="bubble-2"></div>
+            <div className="bubble-1"></div>
           </div>
         </Box>
       </Modal>
