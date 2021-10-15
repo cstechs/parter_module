@@ -108,7 +108,6 @@ const TaskTypeView = () =>{
                           </Grid>
                         </Grid>
                       </div>
-
                     </>
                   }
                   <div className="right-div">

@@ -5,11 +5,11 @@
       background: linear-gradient(90deg, #868cff 0%, #4318ff 100%);
       color: #fff;
       font-size: 15px;
-      border-radius: 10px;
       padding: 8px 10px;
       text-transform: capitalize;
       font-weight: 600;
       filter: drop-shadow(0px 4px 4px  #00000040);
+      border-radius: 14px;
       .person-account{
           display: flex;
           justify-content: center;
@@ -166,6 +166,7 @@
           text-align: center;
           font-size: 16px;
           padding-right: 15px;
+          padding-right: 0;
           .package-type-div{
             padding: 10px 0px;
             margin: 10px 0;
@@ -317,6 +318,7 @@
       box-sizing: border-box;
       outline: none;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(0px 4px 4px #00000040);
       @media screen and (max-width: 763px) {
         width: 100%;
       }
@@ -405,18 +407,13 @@
               outline: none;
               box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
               margin-bottom: 20px;
-              padding: 6px;
-              background: #f2f0f0;
-              border: 1px solid #000000;
-              box-sizing: border-box;
-              outline: none;
-              box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
               color: #ACACAC ;
               display: flex;
               align-items: center;
               justify-content: space-between;
               padding: 0 6px;
               height: 34px;
+              cursor: pointer;
               .upload-icon{
                 padding-left: 5px;
                 height: 34px;

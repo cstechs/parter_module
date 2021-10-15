@@ -28,7 +28,7 @@ const Students = () => {
               <div className="person-account">
                 <AddIcon />
               </div>
-              Add New Student
+              Add New User
             </Button>
           </Grid>
           <Grid item xs={12} md={6}>
