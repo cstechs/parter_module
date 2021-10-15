@@ -54,7 +54,7 @@ const TableComponent = () => {
             <TableCell align="center">
               <span>Package Type</span>
             </TableCell>
-            <TableCell align="center">
+            <TableCell align="center" sx={{paddingRight: 0}}>
               <span>Action</span>
             </TableCell>
           </TableRow>
