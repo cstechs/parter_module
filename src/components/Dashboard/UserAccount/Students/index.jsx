@@ -74,7 +74,7 @@ const Students = () => {
                   <MenuItem key={50} value={50}>
                     Twenty
                   </MenuItem>
-  <MenuItem value={60}>Thirty</MenuItem> */}
+                  <MenuItem value={60}>Thirty</MenuItem> */}
                 </Select>
               </FormControl>
             </div>
